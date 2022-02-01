@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirámide again :-< </title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        /*Crea script para generar pirámide siguiente con los números del 1 al número 
+        que indique el usuario (no mayor de 50) :
+
+        1
+        12
+        123
+        1234
+        12345
+        123456*/
+
+    do{
+            var number = prompt("Introduce un número");
+            var rep;
+
+        if (number <= 50){   
+            for(i = 1; i <= number; i++){
+                for(rep = 1; rep <= i; rep++){
+                    document.write(rep);
+                }
+                document.write("<br>");
+            }
+        }else{
+            alert("No has introducido una cantidad valida");
+        }
+
+    }while (isNaN(number)); /*La función devolverá falso siempre y cuando el valor que
+         le pasemos sea un número, y verdadero en caso contrario. SOLO PARA NUMEROS*/
+
+    </script>
+</body>
+</html>

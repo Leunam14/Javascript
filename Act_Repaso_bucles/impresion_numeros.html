@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>impresion numero</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*Realiza un script que pida números hasta que se pulse “cancelar”. 
+        Si no es un número deberá indicarse con un «alert» y seguir pidiendo. 
+        Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.*/
+
+        var result = 0;
+
+        do {
+            var number = prompt("Introduce tu number");
+
+            if (Number(number) == number) {
+                number = Number(number);
+                result = result + number
+            }else {
+                //SI SE HA PULSADO ACEPTAR SIN INTRODUCIR NADA
+                if (number != undefined) {	//No es Undefined cuando se pulsa aceptar.
+                    alert("Introduce un numero valido");
+                }
+            }
+
+        } while (confirm("¿Desea seguir?"));
+    
+        document.write("La suma total es de " + result)
+    </script>    
+</body>
+</html>

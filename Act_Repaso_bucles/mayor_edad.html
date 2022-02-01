@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pide la edad y si es mayor de 18 años indica que ya puede conducir.</title>
+</head>
+
+<body>
+    <script>
+
+        do {
+            var edad = prompt("Introduce tu edad");
+            if (edad >=18) {
+                alert("Eres mayor de edad y puedes conducir.");
+            }else {
+                alert("Aún eres muy joven hehe.");
+            }
+        } while (isNaN(edad)); /*La función devolverá falso siempre y cuando el valor que
+         le pasemos sea un número, y verdadero en caso contrario.*/
+
+        
+    </script>
+
+</body>
+</html>

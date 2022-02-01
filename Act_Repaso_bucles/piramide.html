@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirámide de números</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        /*Realiza un script que escriba una pirámide del 1 al 9 de la siguiente forma :
+            1
+            22
+            333
+            4444
+            55555
+            666666*/
+
+            var i, rep;
+            //BUCLE FOR PARA RECORRER DE 1 A 30
+            for (i = 0; i <= 9; i++) {
+                //BUCLE INTERIOR PARA HACER LAS REPETICIONES
+                for (rep = 0; rep < i; rep++) {
+                    //IMPRIMIMOS EL NÚMERO i, i VECES
+                    document.write(i);
+                }
+                //IMPRIMIMOS UN SALTO DE LÍNEA
+                document.write("<br>");
+            }
+    </script>
+</body>
+</html>
