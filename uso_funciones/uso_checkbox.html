@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+	<form>
+		<input type="checkbox" id="checkbox1">Javascript
+		<input type="checkbox" id="checkbox2">PHP
+		<input type="checkbox" id="checkbox3">Java
+		<input type="button" value="Mostrar" onClick="contarSeleccionados()">
+	</form>
+	
+	<script>
+		
+		function contarSeleccionados() {
+            let cant = 0;
+			
+            if (document.getElementById('checkbox1').checked) {
+                cant++;
+            }
+            if (document.getElementById('checkbox2').checked) {
+                cant++;
+            }
+            if (document.getElementById('checkbox3').checked) {
+                cant++;
+            }
+
+            alert('Seleccionaste ' + cant + ' lenguajes');
+        }
+		
+	</script>
+</body>
+</html>
