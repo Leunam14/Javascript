@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Uso del punto 5. Creación y Modificación de Elementos</title>
+</head>
+<body>
+
+	<!--
+	ACTIVIDAD 1
+	
+	n1.firstChild = n2
+ 	n1.lastChild = n4
+ 	n1.ChildNodes.length = [2]
+ 	n1.ChildNodes[0] = n2
+ 	n1.ChildNodes[1] = n3
+ 	n1.lastChild.firstChild = n9
+ 	n9.parentNode.parentNode = n1
+ 	n2.nextSibling = n3
+ 	n4.prevSibling = n3
+ 	n4.nextSibling = undefined
+	
+	-->
+
+	<script type="text/javascript">
+		//Tenemos las siguientes variables creadas. 
+		var elementoP = document.createElement('p'); //Para párrafo p
+		var elementoB = document.createElement('b'); //Para negrita
+		var elementoBR = document.createElement('br'); //Para salto de línea
+		
+		//Le asignamos un nuevo atributo title al elementoP que hemos creado.
+		
+		elementoP.setAttribute('title','Párrafo creado desde JavaScript'); 
+		
+		//Preparamos los nodos de texto con variables
+		
+		var texto1 = document.createTextNode('Con JavaScript se '); 
+		var texto2 = document.createTextNode('pueden realizar '); 
+		var texto3 = document.createTextNode('un montón'); 
+		var texto4 = document.createTextNode(' de cosas sobre el documento.');
+		
+		//Añadimos al elementoP, como hijos, los 3 nodos necesarios para dar formato a la salida
+		document.body.appendChild(elementoP);
+		document.body.appendChild(elementoBR);
+		document.body.appendChild(elementoB);
+		
+		elementoP.appendChild(texto1);
+		elementoP.appendChild(elementoB);
+		elementoB.appendChild(texto2);
+		elementoB.appendChild(elementoBR);
+		elementoP.appendChild(elementoB);
+		elementoB.appendChild(texto3);
+		elementoP.appendChild(texto4);
+		
+		//Añadimos al elementoB, como hijos, los 3 nodos adecuados para generar dicha salida
+		
+		
+		
+		//Insertamos el nuevo párrafoP como un nuevo hijo de nuestro párrafo body
+		
+		
+		/*Con JavaScript se <b>pueden realizar</b> 
+		<b>un montón</b> de cosas sobre el documento*/
+	</script>
+</body>
+</html>

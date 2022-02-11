@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+<h1>Texto de ejemplo</h1>
+
+<p id="primero">Primer párrafo. <a href="dom.html">enlace</a></p>
+
+<h2>Segundo texto de ejemplo</h2>
+
+<p id="segundo">Segundo párrafo</p>
+
+<h3>Tercer texto de ejemplo</h3>
+
+<p id="tercero">Tercer párrafo</p>
+
+
+<script>
+
+//CAMBIAR UN ENLACE DEL TAGNAME
+	document.getElementsByTagName("a")[0].href = "http://google.es/";
+	
+
+	
+//CREAR UN NUEVO PARRAFO
+	
+	
+// Crear nodo de tipo Element
+var parrafo = document.createElement("p");
+
+// Crear nodo de tipo Text
+var contenido = document.createTextNode("Se va a colocar en el primer párrafo");
+ 
+// Añadir el nodo Text como hijo del nodo Element
+parrafo.appendChild(contenido);
+ 
+var padre = document.getElementById("primero");
+
+padre.appendChild(parrafo);
+	
+// Añadir el nodo Element como hijo de la pagina
+//document.body.appendChild(parrafo);
+
+//Eliminar el nodo	
+//parrafo.parentNode.removeChild(parrafo);
+	
+	
+	
+	
+//USO DEL INSERT BEFORE	
+var segundoContenido = document.createElement("p");
+	
+var contenido2 = document.createTextNode("Se va a colocar en el segundo párrafo");
+	
+segundoContenido.appendChild(contenido2);
+
+var texto = document.getElementById("segundo");
+
+var padre2 = texto.parentNode;
+	
+padre2.insertBefore(segundoContenido, texto);
+	
+	
+	
+	
+//REEMPLAZAR ELEMENTOS
+	
+var nodo = document.createElement("p");
+	nodo.innerHTML = "Va a modificar el tercer párrafo";
+	
+var objetivo = document.getElementById("tercero");
+	
+	objetivo.parentNode.replaceChild(nodo, objetivo);
+
+	
+	
+</script>
+
+</body>
+</html>
