@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+	<input id="datos"> 
+	<input type="button" id="borrar" value="Borrar">
+	<p id="informacion"></p>
+	
+	<script>
+	
+		var datos = document.getElementById('datos');
+		datos.addEventListener('keypress',aniadir);
+		
+		var borrar = document.getElementById('borrar');
+		borrar.addEventListener('click',limpiar);
+		
+		var informacion = document.getElementById('informacion');
+
+		function aniadir(tecla){
+			
+		  informacion.innerHTML += tecla.key + '<br />';
+		}
+
+		function limpiar(e){
+		  datos.value = '';
+		  informacion.innerHTML = '';
+		}
+		
+	</script>
+</body>
+</html>
