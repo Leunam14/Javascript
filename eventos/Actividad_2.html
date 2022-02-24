@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evento Pasar con Ratón</title>
+</head>
+<body>
+
+<!--Ejercicio 2: Uso de eventos de ratón onmouseover y onmouseout. Crea un programa que me
+muestre un rectángulo (podéis cambiar el tamaño del mismo) de color rojo con el contenido “Pase
+el Ratón por el Rectángulo”, y:
+
+	• Al nos situemos sobre él, cambie el color del rectángulo a “gold” y el contenido ponga
+	“Muchas Gracias”
+	• Al salir de él, cambie el color del rectángulo a “green” y el contenido “Pon el Ratón sobre
+	mí”.--> 
+	
+	<h2>Evento onmouseover y onmouseout</h2>
+
+		<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+			style="background-color:#D94A38;
+			width:120px;
+			height:30px;
+			padding:40px;">
+		Pase el Ratón por el Rectágulo</div>
+		
+		
+<script type="text/javascript">
+	
+// Función para el paso1: al pasar sobre el rectángulo cambia el color y pone Muchas gracias
+	function mouseOver(obj) {
+		
+		obj.style.backgroundColor = 'gold';
+		
+		
+		obj.innerHTML = "Muchas gracias";
+		
+	}
+// Función para el paso2: al salir del rectángulo cambia el color y pone Pon el Ratón sobre mí
+	function mouseOut(obj) {
+		
+		obj.style.backgroundColor = 'green';
+		
+		
+		obj.innerHTML = "Pon el ratón sobre mí";
+		
+	}
+	
+</script>
+
+	
+</body>
+</html>

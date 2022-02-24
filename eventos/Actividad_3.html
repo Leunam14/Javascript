@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Evento Click con Ratón</title>
+</head>
+<body>
+<h2>Evento hacer Click con el Ratón y Soltar</h2>
+<div onmousedown="mouseDown(this)" onmouseup="mouseUp(this)"
+	style="background-color:orange;
+	width:100px;
+	height:30px;
+	padding:50px;">
+	Pulsa sobre mí</div>
+
+
+<script type="text/javascript">
+// Función mouseDown, al pulsar dice que lo sueltes y cambia el color azul
+	function mouseDown(obj) {
+		
+		obj.innerHTML = "Suéltalo";
+		
+		obj.style.backgroundColor = 'blue';
+	}
+// Función mouseUp, al soltar el ratón da las gracias y cambia a color verde
+	function mouseUp(obj) { 
+		
+		obj.innerHTML = "Gracias";
+		
+		obj.style.backgroundColor = 'green';
+	}
+</script>
+</body>
+</html>

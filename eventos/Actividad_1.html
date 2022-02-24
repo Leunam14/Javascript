@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TP 5.7</title>
+</head>
+
+<body>
+<!--Ejercicio 1: Uso del evento onchange. Crea un programa que cuando cambie el contenido de
+un campo de texto lo convierta a mayúsculas.-->
+
+Introduce tu Nombre: <input type="text" id="nombre" onchange="aMayusculas()">
+
+<script>
+	
+	function aMayusculas() {
+		
+	const valor = document.getElementById("nombre");
+		
+    valor.value = valor.value.toUpperCase();
+		
+	}
+	
+</script>
+
+
+</body>
+</html>
