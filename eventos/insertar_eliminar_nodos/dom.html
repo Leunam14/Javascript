@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades DOM</title>
+
+</head>
+
+<body>
+
+    <ul id="to_do_list">
+
+    </ul>
+
+    <script type="text/javascript">
+        
+		//Se crea un array de tareas donde va a incluir las correspondientes tareas
+        const tareas = [
+            'TOL5 de Cliente',
+            'TOL4 de Servidor',
+            'TOL4 de Interfaces Web',
+        ];
+
+        var lista = document.querySelector('#to_do_list'); /*Creamos una variable llamada lista que se
+		le va a asignar el selector id to_do_list, que se usará luego dentro del for para asociarlo.*/
+
+        for (var i = 0; i < tareas.length; i += 1) {
+           
+			var tarea = tareas[i]; /*Creamos la variable tarea que va a ser igual a lo que incluya dentro
+			de la i que está recorriendo el bucle for, que será el contenido de la misma*/
+            
+            var li = document.createElement('li');
+
+               li.textContent = tarea;
+			   
+			   li.id = 'elemento_' + i;
+
+               lista.appendChild(li);
+   		/*Una vez hecho esto creamos el elemento li que va dentro de la lista (ul), y va a contener la
+		información de la variable tarea previamente declarada. Al final le asignamos que sea hija
+		de "lista" que es la variable asociada al id #to_do_list.*/
+			
+		/*Finalmente le añadimos a la variable li un id llamado elemento del iterador del bucle, el 
+		cual se va a asignar a cada elemento de la tarea, y así de esta forma podremos eliminarlo en
+		la correspondiente función mediante setTimeout*/
+        }
+		
+		setTimeout(function() { /*Con esta función nos vamos a encargar de establecer un tiempo de 5
+		seg para que se ejecute*/
+			
+		//En este caso creamos una variable que se va a buscar el id elemento2, y mediante removechild vamos a eliminarlo.
+			
+			var eliminarElemento = document.getElementById('elemento_2');
+		
+		 	lista.removeChild(eliminarElemento);
+			
+		},5000);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Jose Manuel Martínez Romera - Curso Eventos</title>
+</head>
+
+<body>
+
+	<h1>Eventos</h1>
+	<button id="cambiar_fondo">Cambiar fondo</button>
+	
+	<script type="text/javascript">
+	
+		/*Añado un evento a TODO el documento, el cual va a tener como disparador la pulsación de una
+		tecla que se va a ver reflejada en la consola mediante el console.log*/
+		
+		document.addEventListener("keydown", function(evento){
+			console.log(evento);
+		})
+		
+		
+		
+		/*Creamos una variable botón que va a registrar el id asociado al botón creado al principio*/
+		var boton = document.getElementById("cambiar_fondo");
+		
+		/*Esta función se va a encargar de recoger el número máximo aleatorio que se recoge en la 
+		variable randomColor con su array que tiene un número máximo de 255, asociado al rango máximo
+		del RGB.
+		
+		Entonces, esta variable se va a encargar de recopilar todos los valores establecidos en la 
+		función con número máximo de 255, y de esta forma, uniendo todos los números se generará un
+		color.*/
+		function random(numeroMaximo){
+			
+			return Math.round(Math.random() * numeroMaximo);
+		}
+		
+		boton.addEventListener("click", function(evento){
+			//console.log('Has pinchado en el botón')
+			
+			var randomColor = [
+				random(255),
+				random(255),
+				random(255),
+			]
+		/*Establecemos el body que es donde vamos a poner el color de fondo y decimos que es igual a RGB
+		porque es como va a estar definido nuestro color. Si lo pusiéramos en hexadecimal sería parecido
+		pero con otro rango de número y letra.*/
+			document.body.style.backgroundColor = "rgb("+ randomColor[0] + ","+ randomColor[1] + "," + randomColor[2] + ")";
+		})
+		
+		
+	</script>
+	
+</body>
+</html>

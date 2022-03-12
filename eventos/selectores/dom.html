@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Clase numero 2 sobre DOM</title>
+		
+		<style>
+		
+			#Mi_id_de_prueba{
+				color: aqua;
+			}
+		</style>
+	</head>
+
+	<body>
+	
+		<p id="parrafo">Mi "primera" clase práctica de DOM</p>
+		
+		<p>Segundo ejemplo DOM</p>
+		
+		<p>Tercer ejemplo DOM</p>
+	
+	
+		<script type="text/javascript">
+		
+			var parrafo = document.getElementById("parrafo");
+			
+			var parrafo2 = document.getElementsByTagName('p');
+			
+			var parrafo3 = document.getElementsByTagName('p'); 
+			
+			console.log(parrafo.innerText); /*con innerText vamos a acceder al contenido del
+			id parrafo y se muestra por consola.*/
+			
+			parrafo2[1].id = 'Mi_id_de_prueba'; 
+			/*Le he puesto 1 porque estamos accediento al array de p
+			y en este caso estoy accediendo al segundo párrafo.*/
+			
+			parrafo3[2].style.color = 'white';
+			parrafo3[2].style.backgroundColor = 'black';
+		</script>
+	</body>
+</html>
