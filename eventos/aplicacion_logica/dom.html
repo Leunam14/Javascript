@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades DOM</title>
+
+</head>
+
+<body>
+
+   	<input type="text" id="to_do_title"/>
+   	<button id="agregarTarea">Agregar Tarea</button>
+   	
+    <ul id="to_do_list">
+
+    </ul>
+
+    <script type="text/javascript">
+        
+		//Se crea un array de tareas donde va a incluir las correspondientes tareas
+        const tareas = [
+            'TOL5 de Cliente',
+            'TOL4 de Servidor',
+            'TOL4 de Interfaces Web',
+        ];
+
+        var lista = document.querySelector('#to_do_list'); /*Creamos una variable llamada lista que se
+		le va a asignar el selector id to_do_list, que se usará luego dentro del for para asociarlo.*/
+
+        
+		function crearTarea (tarea, id){
+			
+			var li = document.createElement('li');
+			li.textContent = tarea;
+			
+			if(id){
+				li.id = id;
+			}
+			
+			lista.appendChild(li);
+		}
+		
+		
+		for (var i = 0; i < tareas.length; i += 1) {
+           
+			var tarea = tareas[i]; /*Creamos la variable tarea que va a ser igual a lo que incluya dentro
+			de la i que está recorriendo el bucle for, que será el contenido de la misma*/
+			
+			crearTarea(tarea, 'elemento_' + i);
+            
+            /*var li = document.createElement('li');
+
+               li.textContent = tarea;
+			   
+			   li.id = 'elemento_' + i;
+
+               lista.appendChild(li);*/
+			
+   		/*Una vez hecho esto creamos el elemento li que va dentro de la lista (ul), y va a contener la
+		información de la variable tarea previamente declarada. Al final le asignamos que sea hija
+		de "lista" que es la variable asociada al id #to_do_list.*/
+			
+		/*Finalmente le añadimos a la variable li un id llamado elemento del iterador del bucle, el 
+		cual se va a asignar a cada elemento de la tarea, y así de esta forma podremos eliminarlo en
+		la correspondiente función mediante setTimeout*/
+        }
+		
+		var agregarBoton = document.getElementById('agregarTarea');
+		
+		agregarBoton.addEventListener('click', function(){
+			/*Creamos una variable que va a almacenar dentro de dicha variable el contenido almacenado
+			en el id to_do_title que hace referencia a la caja de texto.*/
+			var todoValue = document.getElementById('to_do_title').value;
+			
+			crearTarea(todoValue); //No le asignamos la li porque no hace falta
+			
+			
+			
+			//console.log(todoValue); Vemos por consola que lo escrito en la cadena de texto se guarda
+			
+			//var li = document.createElement("li"); //Creamos el elemento li que va a ir en la lista (ul)
+			
+			//li.textContent = todoValue; 
+			/*Le asginamos a li el contenido de la variable todoValue, que como he dicho antes es lo que se almacena en la caja de texto, por lo que estamos asiganndo el valor para ser usado luego en la lista y que se añada correctamente*/
+			
+			//lista.appendChild(li); 
+			/*Le agregamos a lista el hijo li creado anteriormente para que forme
+			parte de la lista.*/
+		})
+
+    </script>
+</body>
+
+</html>
