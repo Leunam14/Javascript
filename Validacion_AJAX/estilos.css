@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+	
+	* {
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
+		box-sizing: border-box;
+	}
+	
+	form{
+		margin: auto;
+		max-width: 500px;
+		
+	}
+	h2 {
+		text-align: center;
+		margin-bottom: 20px;
+		color: rgba(0,0,0,0.5);
+	}
+	
+	input{
+		display: block;
+		padding: 10px;
+		width: 100%;
+		margin: 5px 0;
+		font-size: 20px;
+	}
+	input[type="submit"] {
+		background-color: #6942EB;
+		border: 0;
+		color:aqua;
+		opacity: 0.8;
+		cursor: pointer;
+		border-radius: 20px;
+		margin-bottom: 0;
+	}
+	
+	input[type="submit"]:hover {
+		opacity: 1;
+	}
+	
+	input[type="submit"]:active { /*Cuando se hace click se reduce el radio del botón*/
+		transform: scale(0.95);
+	}
+
+	#respuesta p{
+
+		text-align: center;
+        padding: 10px;
+		width: 100%;
+		margin: 5px 0;
+		font-size: 20px;
+
+
+
+    }
