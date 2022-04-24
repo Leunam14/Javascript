@@ -1,0 +1,28 @@
+/* CSS Document */
+
+body {
+	overflow-x: hidden;
+
+}
+
+.footer{
+  
+  text-align: center;
+  
+}
+/* Estilos Actividad 1 */
+.color{
+  color: #D5322D;
+
+}
+
+#importante{
+  font-size: bold;
+  size: xx-large;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* Estilos Actividad 2 */

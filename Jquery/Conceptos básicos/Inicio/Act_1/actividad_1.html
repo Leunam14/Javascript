@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="../estilos/estilos.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<title>TOL 6 DIWEB</title>
+
+    </head>
+
+<body>
+
+	<header class="row">
+	
+		<nav class="col-12 navbar navbar-expand-md navbar-light bg-info text-white">
+				
+			<h1>Tarea Online 6: DIWEB</h1>
+				
+		</nav>
+			
+	</header>
+
+	<main>
+				
+		<h4>Una sección</h4>
+
+		<p class="color">Un párrafo a color</p>
+
+		<p class="color">Otro párrafo a color</p>
+
+		<p id="importante">Un párrafo importante</p>
+
+		<h4>Otra sección</h4>
+
+		<button type="button" id="quitarId">Quitar elemento 'importante'</button>
+
+		<button type="button" id="quitarClase">Quitar elemento clase 'color'</button>
+
+		<button type="button" id="quitarEncabezados">Eliminar encabezados</button>
+
+		<script>
+
+				$(function(){
+					$("#quitarClase").click(function(){
+				
+						$(".color").hide();
+						/*$(".color").css({
+							"color": "black"
+						});*/
+					});
+
+					$("#quitarId").click(function(){
+						$("#importante").hide();
+
+					});
+
+					$("#quitarEncabezados").click(function(){
+						$("h4").hide();
+					});
+				});
+
+				
+
+		</script>
+		
+	</main>
+	
+	<footer>
+      	
+      	<section>
+            <p>
+                <h2 align="center">Actividad 1</h2>
+                <a href="../index.html"><h3 align="center">Volver</h3></a>
+            </p>
+      		
+      	</section>
+
+    </footer>
+    
+
+	
+</body>
+
+</html>
