@@ -25,4 +25,16 @@ a{
   text-decoration: none;
 }
 
+.pcolor1{
+  background-color: #ff5555;
+}
+
+.pcolor2{
+  background-color: #55ff55;
+}
+
+.pcolor3{
+  background-color: #5555ff;
+}
+
 /* Estilos Actividad 2 */
