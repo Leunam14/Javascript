@@ -17,8 +17,13 @@ body {
 }
 
 #importante{
-  font-size: bold;
-  size: xx-large;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.importante{
+  font-weight: bolder;
+  font-size: 16px;
 }
 
 a{
@@ -37,4 +42,51 @@ a{
   background-color: #5555ff;
 }
 
-/* Estilos Actividad 2 */
+#div01{
+  width: 80px;
+  height: 80px;
+  background-color: red;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+#div02{
+  width: 80px;
+  height: 80px;
+  background-color: green;
+  margin-left: 130px;
+}
+
+#div03{
+  width: 80px;
+  height: 80px;
+  background-color: blue;
+  margin-left: 210px;
+}
+
+#flip{
+  background-color: #F6CFCE;
+  border: 1px solid;
+  border-color: #CCC;
+  border-radius: 4px;
+  text-align: center;
+  padding: 5px;
+}
+
+#panelAux{
+  background-color: #F6CFCE;
+  border: 1px solid;
+  border-color: #CCC;
+  border-radius: 4px;
+  text-align: center;
+  display: none;
+  padding: 50px;
+
+}
+
+#box01{
+  background-color: #D5322D;
+  height: 100px;
+  width: 100px;
+  display: block;
+}
