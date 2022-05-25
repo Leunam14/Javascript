@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./estilos/estilos.css">
+    <title>Ajax Búsqueda en vivo</title>
+</head>
+<body>
+    <div id="caja"> <!--He añadido un div para añadirle un estilo más visual-->
+        <h1>AJAX Búsqueda en vivo</h1>
+        <p><strong>Buscar:</strong> 
+
+            <input type="text" size="40" id="searchlive" onkeyup="mostrarDatos()"
+            onkeydown="eliminarDatos()"></p>
+            
+            <ul id="list">
+                <li>Los resultados se mostrarán aquí</li>
+            </ul>
+
+            <div id="results">
+ 
+            </div>
+            <script type="text/javascript" src="./ajax.js"></script> <!--Incluye el enlace al archivo search de js-->
+    </div>
+</body>
+</html>

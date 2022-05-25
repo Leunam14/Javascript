@@ -1,0 +1,27 @@
+#caja {
+    margin: 0 auto;
+    border: 2px solid blue;
+    padding: .5em;
+    margin: 200px 350px 200px 350px;
+    background-color: cadetblue;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#caja h1{
+    text-align: center;
+}
+
+#list {
+    list-style: none;
+    margin-left: 30px;
+}
+
+body {
+    background-color: lightblue;
+}
+
+#results{
+    margin-left: 60px;
+}
