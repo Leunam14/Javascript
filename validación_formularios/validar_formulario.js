@@ -23,7 +23,8 @@ function validar(){
 	llamando a la class de CSS llamada de color rojo que va a establecer las líneas de las casilla de dicho color.
 	En el caso de que no sea una celda vacía, pues removerá el color rojo. Esto será en el caso de que la primera vez pusiéramos el campo vacío, entonces a la segunda, si se ha establecido un valor en dicho campo, al dejar de estar vacío se eliminaría tb la class que añade el color.*/
 		if(formulario.nombre.value == ""){
-			alert("El campo nombre está vacio");
+			$("#nombre").after("El campo nombre está vacío");
+			// alert("El campo nombre está vacio");
 			document.getElementById("nombre").focus();
 			document.getElementById("nombre").classList.add('rojo');
 			return false;
