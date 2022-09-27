@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+    
+    <h1 id="saludo"></h1>
+    <h1 id="suma">El resultadod de la suma es:</h1>
+
+    <script>
+        var saludoId = document.getElementById('saludo');
+
+        // function saludar (nombre){
+        //     return 'Hola ' + nombre;
+        // }
+
+        var saludar = nombre => 'Hola ' + nombre;
+        //Creamos una variable, que va a ser igual a un parámetro (nombre), y le pasamos el resultado de la función => Hola + nombre
+
+        saludoId.innerHTML = saludar('Leunam');
+
+        var sumarId = document.getElementById('suma');
+
+        var sumar = (num1, num2) => num1 + num2;
+
+        sumarId.innerHTML += sumar(5,15);
+
+
+    </script>
+</body>
+</html>
