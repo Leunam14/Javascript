@@ -19,7 +19,8 @@ arrayNums.forEach(valor => {
 
 console.log(suma);
 
-//Búsqueda de un valor dentro de un array con el método .find();
+//Búsqueda de un valor dentro de un array con el método 
+//.find();
 //Encontrar el elemento 90 de array
 
 const variable = array.find(valor =>{
