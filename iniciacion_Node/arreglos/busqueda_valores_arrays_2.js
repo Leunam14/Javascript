@@ -48,8 +48,8 @@ console.log(nuevaLista);
 
 
 //.reduce()
-//ancumulado es un valor agregado (acumulativo), que va variando a medida que se va ejecutando el bucle
-//cur son los elementos de la lista
+//acumulado es un valor agregado (acumulativo), que va variando a medida que se va ejecutando el bucle
+//actual son los elementos de la lista
 
 const valores = [3, 8, 56, 24, 14]
 const suma = valores.reduce((acumulado, actual, i, arrayOriginal) => {
