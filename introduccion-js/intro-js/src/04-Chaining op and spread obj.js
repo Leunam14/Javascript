@@ -1,7 +1,7 @@
 
 const invoice = {
     id: 10,
-    name: 'Compras de oficina',
+    name: 'Office',
     date: new Date(),
     client: {
         id: 2,
@@ -34,10 +34,25 @@ const invoice = {
         return total;
     },
     greeting: function (){
-        return `Hola ${this.client.name}`;
+        return `Hello ${this.client.name}`;
     },
 };
 
-console.log(`El nombre es ${invoice.client.name}`);
-console.log(invoice.greeting());
-console.log('Total del pedido: ' + invoice.total());
+//Spread Objects
+const invoice2 = { ...invoice };
+
+// const result = invoice == invoice2;
+
+invoice2.id = 2;
+
+console.log(invoice2);
+console.log(invoice);
+
+//Optional chaining operator
+console.log(invoice.company?.name);
+
+if (invoice.company?.name) {
+    console.log('Found!');
+} else {
+    console.log('Not found');
+}

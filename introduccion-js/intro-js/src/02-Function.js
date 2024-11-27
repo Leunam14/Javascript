@@ -1,7 +1,7 @@
 
 // function sayHello(name, age){
-//     const greeting = `Hola mundo ${name}, tienes ${age} años`;
-//     // console.log(`Hola mundo`);
+//     const greeting = `Hello ${name}, you are ${age} years old`;
+//     // console.log(`Hello World`);
 //     return greeting;
 // }
 
@@ -12,7 +12,7 @@
 
 //LAMBDA / ARROW
 
-const sayHello = (name, age) => `Hola ${name}, tienes ${age} años`;
+const sayHello = (name, age) => `Hello ${name}, you are ${age} years old`;
 const sum = (a, b) => a + b;
 
 console.log(sayHello('Leunam', 30));
