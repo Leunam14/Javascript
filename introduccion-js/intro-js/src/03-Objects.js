@@ -38,6 +38,20 @@ const invoice = {
     },
 };
 
+console.table(invoice);
 console.log(`Name: ${invoice.client.name}`);
 console.log(invoice.greeting());
 console.log('Total: ' + invoice.total());
+
+const useContext = ({ id, name, date, client}) => {
+    return {
+        nombre: name,
+        cliente: client,
+        uId: id
+    }
+}
+
+const { uId, nombre, cliente/*:{ lastName, age}*/ } = useContext(invoice);
+const { lastName, age } = cliente;
+console.log(lastName);
+console.log(nombre); 

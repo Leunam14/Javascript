@@ -1,4 +1,5 @@
 
+import { heroes } from './data/heroes';
 import invoices, { invoiceByClientName , papper } from './data/invoices';
 
 
@@ -29,3 +30,16 @@ console.log(invoiceFilter2)
 
 const result = invoices.some(i => i.client.name === 'Pepe');
 console.log(result)
+
+//------------
+
+const getHeroesById = (id) => {
+    return heroes.find(heroes => heroes.id === id)
+}
+
+const getHeroesByOwner = (owner) => {
+    return heroes.filter(heroes => heroes.owner === owner)
+}
+
+console.log(getHeroesById(2))
+console.log(getHeroesByOwner('DC'))
