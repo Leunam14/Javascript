@@ -1,7 +1,4 @@
 // Ternario Operator
-
-import { heroes } from "./data/heroes";
-
 // const average = 5.8;
 
 // const total = (average >= 5) ? 'Success' : 'Failure';
@@ -25,13 +22,7 @@ import { heroes } from "./data/heroes";
 
 // findAllUsers();
 
-const getHeroesById = (id) => {
-    return heroes.find(heroes => heroes.id === id)
-}
 
-const getHeroesByOwner = (owner) => {
-    return heroes.filter(heroes => heroes.owner === owner)
-}
 
-console.log(getHeroesById(2))
-console.log(getHeroesByOwner('DC'))
+
+
